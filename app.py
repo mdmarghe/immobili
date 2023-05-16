@@ -5,6 +5,21 @@ from numpy import dtype
 import joblib
 
 
+def add_bg_from_url():
+    st.markdown(
+         f"""
+         <style>
+         .stApp {{
+             background-image: url("https://www.istockphoto.com/fr/photo/image-répétable-sans-couture-avec-revêtement-en-plastique-vert-texture-de-clôture-gm504882450-83391459");
+             background-attachment: fixed;
+             background-size: cover
+        }}
+         </style>
+         """,
+        unsafe_allow_html=True
+    )
+add_bg_from_url()
+
 def main():
     newmodel = joblib.load('regression_test.pkl')
     st.title('Analisi dati immobili')
